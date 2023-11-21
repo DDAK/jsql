@@ -18,6 +18,11 @@ ref_thread_local! {
     static managed CONTEXT: Mutex<Vec<String>> = Mutex::new(Vec::new());
     static managed PARAM_COUNT: AtomicUsize = AtomicUsize::new(0);
 }
+
+/*
+Good reference : https://github.com/wseaton/jinjasql-rs/blob/main/src/lib.rs
+for async pg for rust based..
+ */
 /// filter used for binding a single variable, outside of an in-clause or identity expression
 /// eg. WHERE date = {{ date }} => WHERE date = "2020-10-01"
 pub fn bind(value: String) -> String {
