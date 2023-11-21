@@ -14,3 +14,4 @@ minijinja = "1.0.10"
 serde = "1.0.192"
 serde_json = { version = "1.0.108", features = ["raw_value"] }
 serde_yaml = "0.9.1"
+ref_thread_local = "0.1.1"
