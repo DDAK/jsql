@@ -1,4 +1,7 @@
 use std::collections::HashMap;
+use serde::de::MapAccess;
+use serde::de::Visitor;
+use serde::Deserializer;
 
 pub fn deser_hashmap<'de, D: Deserializer<'de>>(deserializer: D) -> Result<HashMap<String, String>, D::Error>
 {
@@ -31,6 +34,6 @@ pub fn deser_hashmap<'de, D: Deserializer<'de>>(deserializer: D) -> Result<HashM
     let visitor = MapVisitor;
     deserializer.deserialize_map(visitor)
 }
-///Usage:pass the param string
-/// let mut deser = serde_json::Deserializer::from_str(params);
-/// let map = deser_hashmap(&mut deser).unwrap();
+// Usage:pass the param string
+// let mut deser = serde_json::Deserializer::from_str(params);
+// let map = deser_hashmap(&mut deser).unwrap();

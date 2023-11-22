@@ -7,12 +7,8 @@ use std::sync::atomic::{AtomicUsize, Ordering};
 use std::sync::Mutex;
 
 use pyo3::prelude::*;
-use minijinja::value::{StructObject};
 use minijinja::Environment;
-use serde::de::*;
 use serde_json::Value;
-use std::io::Read;
-use pyo3::prelude::*;
 
 ref_thread_local! {
     static managed CONTEXT: Mutex<Vec<String>> = Mutex::new(Vec::new());
