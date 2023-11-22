@@ -40,8 +40,10 @@ print(_sql(query,d))
 ```
 # Next
 -[ ] return params as a dictionary/ HashMap, instead of a vec<String>. 
+ 
 -[ ] Wrap the `asynpg` or `sqlalchemy` as a decorator or within the library.
--[ ] Added further test cases
+
+- [ ] Added further test cases
 
 # References
 This project is heavily inspired, & borrows from:
