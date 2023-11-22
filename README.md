@@ -39,9 +39,9 @@ def _sql(query,params):
 print(_sql(query,d))
 ```
 # Next
--[ ] return params as a dictionary/ HashMap, instead of a vec<String>. 
+- [ ] return params as a dictionary/ HashMap, instead of a vec<String>. 
  
--[ ] Wrap the `asynpg` or `sqlalchemy` as a decorator or within the library.
+- [ ] Wrap the `asynpg` or `sqlalchemy` as a decorator or within the library.
 
 - [ ] Added further test cases
 
